@@ -1,0 +1,1 @@
+https://github.com/esphome/aioesphomeapi/archive/v2.2.0.zip
