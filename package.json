@@ -1,0 +1,54 @@
+{
+    "name": "esphome_adapter",
+    "display_name": "ESPhome",
+    "version": "0.1.1",
+    "description": "Mozilla WebThings gateway adapter for ESPhome devices",
+    "author": "Haydn Greatnews",
+    "main": "main.py",
+    "keywords": [
+        "mozilla",
+        "iot",
+        "adapter",
+        "esphome"
+    ],
+    "homepage": "https://github.com/haydnnewport/esphome_adapter",
+    "license": "MPL-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/haydnnewport/esphome_adapter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/haydnnewport/esphome_adapter/issues"
+    },
+    "files": [
+        "LICENSE",
+        "SHA256SUMS",
+        "lib",
+        "main.py",
+        "pkg/__init__.py",
+        "pkg/client.py",
+        "pkg/esphome_adapter.py",
+        "pkg/esphome_device.py",
+        "pkg/esphome_property.py"
+    ],
+    "moziot": {
+        "api": {
+            "min": 2,
+            "max": 2
+        },
+        "plugin": true,
+        "exec": "python3 {path}/main.py",
+        "config": {
+            "password": ""
+        },
+        "schema": {
+            "type": "object",
+            "properties": {
+                "password": {
+                    "type": "string",
+                    "description": "ESPhome api password"
+                }
+            }
+        }
+    }
+}
